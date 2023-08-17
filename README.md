@@ -17,4 +17,4 @@ mvn spring-boot:run
 
 ## Medium article for further details
 
-<a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@lombos.monika/0"><img src="https://medium.com/@lombos.monika/easy-peasy-example-of-spring-boot-docker-compose-dependency-cbe38b1f5cc6" alt="Recent Article 0">
+https://medium.com/@lombos.monika/easy-peasy-example-of-spring-boot-docker-compose-dependency-cbe38b1f5cc6
