@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: '@name@'
+    version: '@version@'
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+    producer:
+      transaction-id-prefix: tx-${spring.application.name}
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      acks: all
+      compression-type: snappy
+      batch-size: 32768  #32 KB
+      properties:
+        linger.ms: 20
+  docker:
+    compose:
+      file: "./docker/docker-compose.yml"
+      profiles.active: "indexer"
+app:
+  kafka:
+    topic: account-domain-event
+
+logging:
+  level:
+    ROOT: INFO
+    com.example.indexer.service: DEBUG
